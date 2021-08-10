@@ -1,5 +1,7 @@
 import streamlit as st
 import requests
+import datetime
+
 
 '''
 # TaxiFareModel front
@@ -22,6 +24,21 @@ Either as with the title by just creating a string (or an f-string). Or as with 
 - dropoff latitude
 - passenger count
 '''
+
+pickup_date = st.date_input("Pick-up date:",datetime.date(2021, 7, 6))
+st.write('Pick-up date is:', pickup_date)
+
+pickup_time = st.time_input('Pick-up time:', datetime.time(8, 24))
+st.write('Pick-up time', pickup_time)
+
+
+
+
+
+passenger_count = st.number_input('Number of passenger:')
+st.write('Number of passenger:', passenger_count)
+
+
 
 '''
 ## Once we have these, let's call our API in order to retrieve a prediction
